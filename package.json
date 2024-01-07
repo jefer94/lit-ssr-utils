@@ -1,0 +1,32 @@
+{
+  "name": "lit-ssr-utils",
+  "module": "index.ts",
+  "type": "module",
+  "version": "0.1.0",
+  "bin": {
+    "ssr-lit": "ssr-lit"
+  },
+  "scripts": {
+    "start": "bun index.ts",
+    "test": "bun test",
+    "build": "bun scripts/build.ts",
+    "build2": "bash -c \"bun build src/*.ts src/**/*.ts --outdir dist --targer=node -e '*' && cd dist && mv ./src/* ./ && rm -rf ./src\"",
+    "c": "bash -c 'cd bin && bun build ../src/render.ts --target=bun --compile'"
+  },
+  "files": [
+    "/dist/",
+    "/index.{d.ts,d.ts.map,js,js.map}",
+    "/src/"
+  ],
+  "dependencies": {
+    "@lit-labs/ssr": "^3.2.0",
+    "lit": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.0.0",
+    "prettier": "^3.1.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+message Dependency {
+  string code = 1;
+  string ext = 2;
+}
+
+message Request {
+  string html = 1;
+  repeated Dependency dependencies = 2;
+}
+
+message Response {
+  string html = 1;
+}
+
+message Error {
+  string message = 1;
+  string code = 2;
+}

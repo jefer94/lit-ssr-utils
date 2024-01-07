@@ -1,0 +1,14 @@
+{
+  "name": "unix-domain-socket",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "protobufjs": "^7.2.5"
+  }
+}
