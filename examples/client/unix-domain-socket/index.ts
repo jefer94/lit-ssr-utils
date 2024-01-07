@@ -83,16 +83,6 @@ async function main(): Promise<void> {
       60000
     )
   );
-  // console.log(await render());
-  // console.log(await render());
-  // console.log(await render());
-  // console.log(await render());
-  // console.log(await render());
-  // console.log(await render());
-  // console.log(await render());
-  // console.log(await render());
-  // console.log(await render());
-  // console.log(await render(1));
   console.log("done");
 }
 main();
