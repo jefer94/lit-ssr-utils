@@ -1,5 +1,5 @@
 import net from "net";
-import * as protobuf from "protobufjs";
+import * as protobuf from "protobufjs/light";
 
 let root: protobuf.Root;
 let Request: protobuf.Type;

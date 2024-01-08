@@ -1,5 +1,5 @@
 import fs from "fs";
-import * as protobuf from "protobufjs";
+import * as protobuf from "protobufjs/minimal";
 
 import rpc from "../../../../lit-ssr-utils/rpc";
 
