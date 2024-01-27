@@ -20,7 +20,7 @@ Content-Type: application/json
 
 {
   "html": "<my-component />"
-  "dependencies": [{ code: '...', ext: 'ts' }]
+  "dependencies": [{ "code": "...", "ext": "ts" }]
 }
 ```
 
