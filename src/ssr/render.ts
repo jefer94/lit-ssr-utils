@@ -1,10 +1,10 @@
 import { render as litRender } from "@lit-labs/ssr";
 import { collectResultSync } from "@lit-labs/ssr/lib/render-result.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
-import type { LitSsrError } from "./types";
-import validate from "./validate";
+import type { LitSsrError } from "./types.js";
+import validate from "./validate.js";
 
-import loadModule from "../module/loadModule";
+import loadModule from "../module/loadModule.js";
 
 import { html } from "lit";
 

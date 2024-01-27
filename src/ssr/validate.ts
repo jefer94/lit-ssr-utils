@@ -1,4 +1,4 @@
-import type { LitSsrError } from "./types";
+import type { LitSsrError } from "./types.js";
 
 export default function validate(body: any): LitSsrError | undefined {
   if (!body || Object.keys(body).length === 0) {

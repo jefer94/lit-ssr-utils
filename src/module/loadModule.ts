@@ -18,7 +18,7 @@ function count(str: string, substr: string): number {
 
 function getRoot() {
   let root = import.meta.dir;
-  const regex = new RegExp(`src`, "g");
+  // const regex = new RegExp(`src`, "g");
   let n = count(root, "src");
 
   if (n === 0) {

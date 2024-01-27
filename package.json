@@ -1,33 +1,48 @@
 {
   "name": "lit-ssr-utils",
-  "module": "index.ts",
+  "version": "0.2.0",
+  "license": "LGPL-3.0-or-later",
+  "author": "Jeferson De Freitas <jdefreitaspinto@gmail.com> (https://github.com/jefer94)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "src/index.ts",
   "type": "module",
-  "version": "0.1.0",
-  "bin": {
-    "ssr-lit": "ssr-lit"
-  },
   "scripts": {
-    "start": "bun index.ts",
     "test": "bun test",
-    "build": "bun scripts/build.ts",
-    "build2": "bash -c \"bun build src/*.ts src/**/*.ts --outdir dist --targer=node -e '*' && cd dist && mv ./src/* ./ && rm -rf ./src\"",
-    "c": "bash -c 'cd bin && bun build ../src/render.ts --target=bun --compile'"
+    "build": "bun run build.mjs",
+    "prepublishOnly": "bun run build"
   },
-  "files": [
-    "/dist/",
-    "/index.{d.ts,d.ts.map,js,js.map}",
-    "/src/"
-  ],
   "dependencies": {
     "@lit-labs/ssr": "^3.2.0",
     "lit": "^3.1.0",
     "protobufjs": "^7.2.5"
   },
   "devDependencies": {
-    "@types/bun": "^1.0.0",
+    "@types/bun": "^1.0.4",
+    "@types/node": "^20.11.7",
+    "bun-plugin-dts": "^0.2.1",
     "prettier": "^3.1.1"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
-  }
+  },
+  "optionalDependencies": {
+    "elysia": "^0.8.14"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "bun",
+    "unix-socket",
+    "elysia",
+    "ssr",
+    "lit-ssr",
+    "ssr-outside-javascript",
+    "server-side-rendering",
+    "lit-server-side-rendering",
+    "server-side-rendering-outside-javascript"
+  ],
+  "bugs": "https://github.com/jefer94/lit-ssr-utils/issues",
+  "repository": "github:jefer94/lit-ssr-utils"
 }

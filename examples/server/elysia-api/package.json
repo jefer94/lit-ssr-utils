@@ -4,13 +4,12 @@
     "test": "bun test"
   },
   "dependencies": {
-    "@lit-labs/ssr": "^3.2.0",
-    "elysia": "^0.8.6",
-    "lit": "^3.1.0",
-    "protobufjs": "^7.2.5"
+    "elysia": "^0.8.14",
+    "lit-ssr-utils": "^0.2.0"
   },
   "devDependencies": {
     "@types/bun": "^1.0.0",
+    "@types/node": "^1.0.0",
     "prettier": "^3.1.1"
   },
   "peerDependencies": {

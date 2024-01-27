@@ -1,5 +1,5 @@
 import net from "net";
-import * as protobuf from "protobufjs/light";
+import * as protobuf from "protobufjs";
 
 let root: protobuf.Root;
 let Request: protobuf.Type;
@@ -58,7 +58,7 @@ async function render(
 }
 
 async function main(): Promise<void> {
-  root = await protobuf.load("ssr.proto");
+  root = await protobuf.load("../../proto/ssr.proto");
   Request = root.lookupType("Request");
   Response = root.lookupType("Response");
   ErrorType = root.lookupType("Error");
