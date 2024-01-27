@@ -1,6 +1,5 @@
 import dts from "bun-plugin-dts";
-import { mkdir } from "fs/promises";
-
+import { mkdir, unlink } from "fs/promises";
 try {
   await mkdir("./proto", { recursive: true });
 } catch (err) {}
@@ -30,6 +29,12 @@ async function entrypoint(input) {
     external: ["*"],
     plugins: [dts()],
   });
+
+  try {
+    const file = Bun.file(outdir + "/" + fileName.replace(".ts", ".js"));
+    await Bun.write(outdir + "/" + fileName.replace(".ts", ".mjs"), file);
+    await unlink(outdir + "/" + fileName.replace(".ts", ".js"));
+  } catch (err) {}
 }
 
 const entrypoints = [
