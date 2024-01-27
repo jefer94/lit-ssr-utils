@@ -10,16 +10,18 @@
   "scripts": {
     "test": "bun test",
     "build": "bun run build.mjs",
-    "prepublishOnly": "bun run build"
+    "deploy": "bun run deploy.mjs",
+    "prepublishOnly": "bun run deploy"
   },
   "dependencies": {
     "@lit-labs/ssr": "^3.2.0",
     "lit": "^3.1.0",
+    "lit-ssr-utils": "^0.2.3",
     "protobufjs": "^7.2.5"
   },
   "devDependencies": {
     "@types/bun": "^1.0.4",
-    "@types/node": "^20.11.7",
+    "@types/node": "^20.11.8",
     "bun-plugin-dts": "^0.2.1",
     "prettier": "^3.1.1"
   },
