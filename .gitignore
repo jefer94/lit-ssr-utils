@@ -174,9 +174,6 @@ dist
 # Finder (MacOS) folder config
 .DS_Store
 /tmp
-# *.js
-# **/*.js
-# **/*.mjs
 !bin/ssr-lit.js
 
 !/api.js
