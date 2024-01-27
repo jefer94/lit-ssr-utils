@@ -41,7 +41,7 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 
 ## License
 
-This project is licensed under the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html).
+This project is licensed under the [LGPLv3](https://www.gnu.org/licenses/lgpl-3.0.en.html).
 
 ## Contact
 
