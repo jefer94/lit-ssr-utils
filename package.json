@@ -1,6 +1,6 @@
 {
   "name": "lit-ssr-utils",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "license": "LGPL-3.0-or-later",
   "author": "Jeferson De Freitas <jdefreitaspinto@gmail.com> (https://github.com/jefer94)",
   "main": "dist/index.js",

@@ -1,6 +1,6 @@
 # Lit SSR API
 
-Lit API to implement SSR to projects that do not use Javascript.
+Lit utils to implement SSR to projects that do not use Javascript.
 
 ## Installation
 
@@ -19,14 +19,46 @@ POST / HTTP/1.1
 Content-Type: application/json
 
 {
-  html: '<my-component />'
-  dependencies: [{ code: '...', ext: 'ts' }]
+  "html": "<my-component />"
+  "dependencies": [{ code: '...', ext: 'ts' }]
 }
 ```
 
-The handler is decoupled, you should write a lambda function using `import { renderLitElement } from 'utils/renderLitElement.ts'`. Don't forget to protect this endpoint, anybody should inject a code inside your server.
-
 Don't forget to import [`@lit-labs/ssr-client/lit-element-hydrate-support.js`](https://lit.dev/docs/ssr/client-usage/#loading-@lit-labsssr-clientlit-element-hydrate-support.js) in your HTML to add hydrate support (issue [#4472](https://github.com/lit/lit/issues/4472)).
+
+### Using adapters
+
+You should implement our adapter with:
+
+```ts
+import start from "lit-ssr-utils/adapters/elysia";
+
+start();
+```
+
+### Out adapters
+
+| Adapter          | Stability | Ready to use | Additional dependency |
+| ---------------- | --------- | ------------ | --------------------- |
+| Elysia           | ✅        | 🤔💭         | elysia                |
+| unix-socket/bun  | ❌        | ❌           |                       |
+| unix-socket/Node | ❌        | ❌           |                       |
+
+### Implementing your favorite framework
+
+You should implement it using:
+
+```ts
+import { rpc } from "lit-ssr-utils";
+```
+
+Or.
+
+```ts
+import { api } from "lit-ssr-utils";
+```
+
+I suggest that you check our `examples` folder.
 
 ## Contributing
 
