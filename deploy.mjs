@@ -11,12 +11,12 @@ try {
 } catch (err) {}
 
 async function entrypoint(input) {
-  let path = input.split("/");
+  const path = input.split("/");
   const fileName = path.pop();
   const typeName = fileName.replace(".ts", ".d.ts");
   const desttypeName = input.replace(typeName, typeName);
 
-  path = path.splice(1, 1);
+  path[1] = ".";
   const outdir = path.join("/");
 
   try {
